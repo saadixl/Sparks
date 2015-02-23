@@ -1,0 +1,42 @@
+html,body{
+	overflow: hidden;
+}
+#inner{
+	margin-top: 200px;
+}
+#input-url{
+	margin-right: 0 !important;
+	float: left;
+}
+#do-button{
+	margin-left: -5px !important;
+	height: 34px;
+	outline: none;
+	color: white;
+	background: #323232;
+}
+#tits{
+	font-family: 'Bangers', cursive;
+	font-size: 400%;
+	color: #323232;
+}
+#output-url{
+	background: transparent;
+	border:none;
+	outline: none;
+	box-shadow: none;
+	padding:0;
+	font-size: 140%;
+	color: #3c763d;
+}
+
+#copy-suck{
+	display: none;
+}
+	
+#fail-div{
+	display: none;
+}
+#suck-div{
+	display: none;
+}

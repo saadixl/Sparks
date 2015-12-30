@@ -22,7 +22,7 @@ module.exports = function(app, URL) {
         });
 
         // Sending the short url as response
-        res.send('http://saadixl.pw/sparks/' + req.body.handle);
+        res.send('http://107.170.128.220:6600/' + req.body.handle);
     });
 
     // This is the method where we try to visit a big url using short handle

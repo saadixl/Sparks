@@ -9,10 +9,15 @@ module.exports = function(app, URL) {
     // This is the method where we save the url
     app.post('/save', urlencodedParser, function(req, res) {
 
+        var theRealUrl = req.body.theUrl;
+        if(theRealUrl==""){
+            theRealUrl = "https://github.com/saadixl";
+        }
+
         // Creating a new url record
         var newURL = new URL({
             handle: req.body.handle,
-            theUrl: req.body.theUrl
+            theUrl: theRealUrl
         });
 
         // saving the new URL record

@@ -9,8 +9,10 @@ module.exports = function(app, URL) {
     // This is the method where we save the url
     app.post('/save', urlencodedParser, function(req, res) {
 
+        /* In case some one is planning to crash my server,
+         he will be forced to visit my github */
         var theRealUrl = req.body.theUrl;
-        if(theRealUrl==""){
+        if (theRealUrl == "") {
             theRealUrl = "https://github.com/saadixl";
         }
 
@@ -30,7 +32,7 @@ module.exports = function(app, URL) {
                 realHandle = doc._id;
             }
             // Sending the short url as response
-            res.send('http://107.170.128.220:6600/' + realHandle);
+            res.send('http://localhost:6600/' + realHandle);
 
         });
 
@@ -39,7 +41,7 @@ module.exports = function(app, URL) {
     // This is the method where we try to visit a big url using short handle
     app.get('/:handle', urlencodedParser, function(req, res) {
         URL.find({
-            // Checking if the short url exists in custom handle or id
+                // Checking if the short url exists in custom handle or id
                 $or: [{
                     'handle': req.params.handle
                 }, {

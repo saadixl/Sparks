@@ -50,7 +50,7 @@ module.exports = function(app, URL) {
             },
             // if exists then redirect to that url
             function(err, docs) {
-                if (docs.length == 1) {
+                if (docs.length > 0) {
                     res.redirect(docs[0].theUrl);
                 }
             });

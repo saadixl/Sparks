@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var shortid = require('shortid');
 
 // Connecting mongoose
-mongoose.connect('mongodb://localhost/sparks');
+mongoose.connect('mongodb://127.0.0.1/sparks');
 
 // Creating a Schema for MongoDB
 var urlSchema = new mongoose.Schema({

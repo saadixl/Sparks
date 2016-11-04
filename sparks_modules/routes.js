@@ -32,7 +32,7 @@ module.exports = function(app, URL) {
                 realHandle = doc._id;
             }
             // Sending the short url as response
-            res.send('http://localhost:6600/' + realHandle);
+            res.send('http://163.172.182.52:6600/' + realHandle);
 
         });
 
